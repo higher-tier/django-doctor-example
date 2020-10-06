@@ -2,13 +2,13 @@ from django.db import models
 
 
 class StandardModelMethodOrded(models.Model):
-    def get_absolute_url(self, *args, **kwargs):
+    def get_absolute_url(self, foo, *args, **kwargs):
         return super().get_absolute_url(*args, **kwargs)
 
-    def delete(self, *args, **kwargs):
+    def delete(self, args, **kwargs):
         return super().delete(*args, **kwargs)
 
-    def save(self, *args, **kwargs):
+    def save(self, bar, *args, **kwargs):
         return super().save(*args, **kwargs)
 
     def __str__(self):
@@ -28,7 +28,6 @@ class DemoMethodShouldComeAfterStandardModelMethods(models.Model):
 
     def save(self, *args, **kwargs):
         return super().save(*args, **kwargs)
-
 
 
 class DemoTooManyModelsOne(models.Model):
