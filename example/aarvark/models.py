@@ -76,7 +76,7 @@ class DemoTooManyModelsEleven(models.Model):
 
 
 class NullableCharFieldModel(models.Model):
-    field_one = models.CharField(max_length=5001, null=True)
+    field_one = models.CharField(max_length=5000, null=True)
     field_two = models.CharField(max_length=50)
 
 
