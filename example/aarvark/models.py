@@ -2,17 +2,17 @@ from django.db import models
 
 
 class StandardModelMethodOrded(models.Model):
-    def get_absolute_url(self, baz, *args, **kwargs):
+    def get_absolute_url(self, bar, *args, **kwargs):
         return super().get_absolute_url(*args, **kwargs)
 
     def delete(self, args, **kwargs):
         return super().delete(*args, **kwargs)
 
-    def save(self, foo, *args, **kwargs):
+    def save(self, bar, *args, **kwargs):
         return super().save(*args, **kwargs)
 
     def __str__(self):
-        return 'StandardModelMethodOrded!'
+        return 'StandardModelMethodOrded'
 
     def __unicode__(self):
         return 'StandardModelMethodOrded'
@@ -76,7 +76,7 @@ class DemoTooManyModelsEleven(models.Model):
 
 
 class NullableCharFieldModel(models.Model):
-    field_one = models.CharField(max_length=51, null=True)
+    field_one = models.CharField(max_length=50, null=True)
     field_two = models.CharField(max_length=50)
 
 
