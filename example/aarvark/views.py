@@ -6,7 +6,7 @@ from . import models
 from django.contrib import admin
 
 
-class TheModelAdmin(admin.ModelAdmin):
+class ModelExampleAdmin(admin.ModelAdmin):
 	pass
 
 
