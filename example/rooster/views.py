@@ -13,5 +13,5 @@ class View6(View):
     pass
 
 def some_func():
-    retur for
+    retur fo
 
