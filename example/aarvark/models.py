@@ -81,7 +81,7 @@ class NullableCharFieldModel(models.Model):
 
 
 class NullableTextFieldModel(models.Model):
-    field_one = models.TextField(null=True)
+    field_one = models.TextField(default="")
     field_two = models.TextField()
 
 
