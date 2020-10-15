@@ -35,9 +35,6 @@ DEBUG = env.bool('DEBUG', False)
 # As the app is running behind a host-based router supplied by PaaS, we can open ALLOWED_HOSTS
 ALLOWED_HOSTS = ['*']
 
-# https://docs.djangoproject.com/en/dev/ref/settings/#append-slash
-APPEND_SLASH = True
-
 # Application definition
 
 INSTALLED_APPS = [
