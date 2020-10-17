@@ -20,3 +20,7 @@ class View8(View):
 
 class View9(View):
     pass
+
+
+class View10(View):
+    pass
