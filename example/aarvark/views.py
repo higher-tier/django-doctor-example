@@ -16,3 +16,7 @@ class View7(View):
 
 class View8(View):
     pass
+
+
+class View9(View):
+    pass
