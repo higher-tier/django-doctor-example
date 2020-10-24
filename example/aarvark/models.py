@@ -173,7 +173,9 @@ class NullableManyToManyFieldModel(models.Model):
 
 class NullableNotBlankFieldsModel(models.Model):
     field_a = models.TextField(null=True, blank=False)
-    field_b = models.TextField(null=True)
+    field_b = models.TextField(
+        null=True
+    )
     field_c = models.CharField(null=True, blank=False)
     field_d = models.CharField(null=True)
     field_e = models.URLField(null=True, blank=False)
@@ -187,10 +189,18 @@ class NullableNotBlankFieldsModel(models.Model):
     field_k = models.FilePathField(null=True, blank=False)
     field_l = models.FilePathField(null=True)
     field_m = models.BooleanField(null=True, blank=False)
-    field_n = models.BooleanField(null=True)
+    field_n = models.BooleanField(
+        null=True
+    )
 
 
 class NullableCharFieldWithChoicesModel(models.Model):
-    field_one = models.CharField(null=True, choices=[('', ''),('FOO', 'Foo')])
+    field_one = models.CharField(
+        null=True, choices=[('', ''),('FOO', 'Foo')]
+    )
     field_two = models.CharField(null=True, choices=[('FOO', 'Foo'),])
-    field_three = models.CharField(null=True, choices=[('', ''),('FOO', 'Foo')], unique=True)
+    field_three = models.CharField(
+        null=True,
+        choices=[('', ''),('FOO', 'Foo')],
+        unique=True
+    )
