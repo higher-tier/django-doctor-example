@@ -204,3 +204,7 @@ class NullableCharFieldWithChoicesModel(models.Model):
         choices=[('', ''),('FOO', 'Foo')],
         unique=True
     )
+    field_four = models.CharField(
+        null=True,
+        choices=[('', ''),('FOO', 'Foo')],
+    )
