@@ -55,7 +55,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',  #  should be near bottom
+    'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.http.ConditionalGetMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -63,7 +63,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.locale.LocaleMiddleware',  #  should be near top
+    'django.middleware.locale.LocaleMiddleware',
 ]
 
 ROOT_URLCONF = 'config.urls'
@@ -96,7 +96,7 @@ STATIC_URL = STATIC_HOST + '/static/'
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.9/topics/i18n/
-LANGUAGE_CODE = 'en-gb'
+LANGUAGE_CODE = 'en-us'
 TIME_ZONE = 'UTC'
 USE_L10N = True
 USE_TZ = True
@@ -139,3 +139,5 @@ SSO_PROXY_SIGNUP_URL = 'https://signup.com'
 SSO_PROXY_LOGIN_URL = 'https://login.com'
 SSO_PROXY_LOGOUT_URL = 'https://logout.com'
 SSO_PROFILE_URL = 'https://profile.com'
+
+ADMINS = []
