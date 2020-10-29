@@ -99,7 +99,7 @@ STATIC_URL = STATIC_HOST + '/static/'
 LANGUAGE_CODE = 'en-us'
 TIME_ZONE = 'UTC'
 USE_L10N = True
-USE_TZ = True
+USE_TZ = False
 
 # https://docs.djangoproject.com/en/2.2/ref/settings/#std:setting-LANGUAGE_COOKIE_NAME
 LANGUAGE_COOKIE_DEPRECATED_NAME = 'django-language'
