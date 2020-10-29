@@ -139,5 +139,3 @@ SSO_PROXY_SIGNUP_URL = 'https://signup.com'
 SSO_PROXY_LOGIN_URL = 'https://login.com'
 SSO_PROXY_LOGOUT_URL = 'https://logout.com'
 SSO_PROFILE_URL = 'https://profile.com'
-
-ADMINS = []
