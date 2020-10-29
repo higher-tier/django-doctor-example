@@ -30,7 +30,7 @@ BASE_DIR = os.path.dirname(PROJECT_ROOT)
 SECRET_KEY = env.str('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = env.bool('DEBUG', False)
+DEBUG = False
 
 # As the app is running behind a host-based router supplied by PaaS, we can open ALLOWED_HOSTS
 ALLOWED_HOSTS = ['*']
