@@ -30,8 +30,6 @@ BASE_DIR = os.path.dirname(PROJECT_ROOT)
 SECRET_KEY = env.str('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
-
 # As the app is running behind a host-based router supplied by PaaS, we can open ALLOWED_HOSTS
 ALLOWED_HOSTS = ['*']
 
@@ -96,11 +94,8 @@ STATIC_URL = STATIC_HOST + '/static/'
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.9/topics/i18n/
-LANGUAGE_CODE = 'en-us'
 TIME_ZONE = 'UTC'
 USE_L10N = True
-USE_TZ = False
-
 # https://docs.djangoproject.com/en/2.2/ref/settings/#std:setting-LANGUAGE_COOKIE_NAME
 LANGUAGE_COOKIE_DEPRECATED_NAME = 'django-language'
 # Django's default value for LANGUAGE_COOKIE_DOMAIN is None
@@ -139,5 +134,3 @@ SSO_PROXY_SIGNUP_URL = 'https://signup.com'
 SSO_PROXY_LOGIN_URL = 'https://login.com'
 SSO_PROXY_LOGOUT_URL = 'https://logout.com'
 SSO_PROFILE_URL = 'https://profile.com'
-
-ADMINS = []
