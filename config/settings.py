@@ -33,7 +33,7 @@ SECRET_KEY = env.str('SECRET_KEY')
 DEBUG = False
 
 # As the app is running behind a host-based router supplied by PaaS, we can open ALLOWED_HOSTS
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = []
 
 # https://docs.djangoproject.com/en/dev/ref/settings/#append-slash
 APPEND_SLASH = True
