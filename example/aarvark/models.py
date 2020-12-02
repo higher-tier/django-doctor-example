@@ -114,7 +114,7 @@ class NullableNotBlankFieldModel(models.Model):
 
 
 class UniqueForModel(models.Model):
-    field = models.TextField(null=True, blank=False)
+    field = models.TextField(default='', blank=True)
     unique_for_date = models.DateField(unique_for_date='field')
     unique_for_month = models.DateField(unique_for_month='field')
     unique_for_year = models.DateField(unique_for_year='field')
@@ -126,7 +126,7 @@ class ForeignKeyMissingRelatedNameModel(models.Model):
 
 
 class HugeCharFieldModel(models.Model):
-    field = models.CharField(max_length=513)
+    field = models.TextField()
 
 
 class AuthNowModel(models.Model):
@@ -136,7 +136,7 @@ class AuthNowModel(models.Model):
 
 
 class NullBooleanFieldModel(models.Model):
-    field_one = models.NullBooleanField()
+    field_one = models.BooleanField(null=True)
     field_two = models.BooleanField(null=True)
 
 
@@ -147,8 +147,8 @@ class DatabbaseDependentLimitModel(models.Model):
 
 
 class ExplicitlyDefinedDefaultArgumentsModel(models.Model):
-    field_two = models.URLField(null=False)
-    field_one = models.URLField(blank=False)
+    field_two = models.URLField()
+    field_one = models.URLField()
 
 
 
@@ -164,40 +164,36 @@ class UniqueForeignKeyModel(models.Model):
 
 
 class PrimaryKeyUniqueFalse(models.Model):
-    field = models.CharField(max_length=100, primary_key=True, unique=False)
+    field = models.CharField(max_length=100, primary_key=True)
 
 
 class NullableManyToManyFieldModel(models.Model):
-    field_two = models.ManyToManyField(PrimaryKeyUniqueFalse, null=True)
+    field_two = models.ManyToManyField(PrimaryKeyUniqueFalse, null=True, blank=True)
 
 
 class NullableNotBlankFieldsModel(models.Model):
-    field_a = models.TextField(null=True, blank=False)
-    field_b = models.TextField(
-        null=True
-    )
-    field_c = models.CharField(null=True, blank=False)
-    field_d = models.CharField(null=True)
-    field_e = models.URLField(null=True, blank=False)
-    field_f = models.URLField(null=True)
-    field_e = models.EmailField(null=True, blank=False)
-    field_f = models.EmailField(null=True)
-    field_g = models.DateField(null=True, blank=False)
-    field_h = models.DateField(null=True)
-    field_i = models.SlugField(null=True, blank=False)
-    field_j = models.SlugField(null=True)
-    field_k = models.FilePathField(null=True, blank=False)
-    field_l = models.FilePathField(null=True)
-    field_m = models.BooleanField(null=True, blank=False)
+    field_a = models.TextField(default='', blank=True)
+    field_b = models.TextField(default='', blank=True)
+    field_c = models.CharField(default='', blank=True)
+    field_d = models.CharField(default='', blank=True)
+    field_e = models.URLField(default='', blank=True)
+    field_f = models.URLField(default='', blank=True)
+    field_e = models.EmailField(default='', blank=True)
+    field_f = models.EmailField(default='', blank=True)
+    field_g = models.DateField(null=True, blank=True)
+    field_h = models.DateField(null=True, blank=True)
+    field_i = models.SlugField(default='', blank=True)
+    field_j = models.SlugField(default='', blank=True)
+    field_k = models.FilePathField(null=True, blank=True)
+    field_l = models.FilePathField(null=True, blank=True)
+    field_m = models.BooleanField(null=True)
     field_n = models.BooleanField(
         null=True
     )
 
 
 class NullableCharFieldWithChoicesModel(models.Model):
-    field_one = models.CharField(
-        null=True, choices=[('', ''),('FOO', 'Foo')]
-    )
+    field_one = models.CharField(default='', choices=[('', ''), ('FOO', 'Foo')], blank=True)
     field_two = models.CharField(null=True, choices=[('FOO', 'Foo'),])
     field_three = models.CharField(
         null=True,
@@ -207,8 +203,9 @@ class NullableCharFieldWithChoicesModel(models.Model):
         help='Some very helpful help',
     )
     field_four = models.CharField(
-        null=True,
-        choices=[('', ''),('FOO', 'Foo')],
-        verbose_name='Some very verbose name',
-        help='Some very helpful help',
-    )
+    default='',
+    choices=[('', ''), ('FOO', 'Foo')],
+    verbose_name='Some very verbose name',
+    help='Some very helpful help',
+    blank=True,
+)
