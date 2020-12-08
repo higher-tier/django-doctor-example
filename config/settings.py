@@ -36,7 +36,7 @@ DEBUG = env.bool('DEBUG', False)
 ALLOWED_HOSTS = ['*']
 
 # https://docs.djangoproject.com/en/dev/ref/settings/#append-slash
-APPEND_SLASH = True
+
 
 # Application definition
 
