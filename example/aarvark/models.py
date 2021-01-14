@@ -74,7 +74,6 @@ class DemoTooManyModelsEleven(models.Model):
     pass
 
 
-
 class NullableCharFieldModel(models.Model):
     field_one = models.TextField(default='', blank=True)
     field_two = models.CharField(max_length=50)
