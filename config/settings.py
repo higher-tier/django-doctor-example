@@ -36,7 +36,7 @@ DEBUG = env.bool('DEBUG', False)
 ALLOWED_HOSTS = ['*']
 
 # https://docs.djangoproject.com/en/dev/ref/settings/#append-slash
-APPEND_SLASH = True
+
 
 # Application definition
 
@@ -99,7 +99,7 @@ STATIC_URL = STATIC_HOST + '/static/'
 LANGUAGE_CODE = 'en-gb'
 TIME_ZONE = 'UTC'
 USE_L10N = True
-USE_TZ = True
+
 
 # https://docs.djangoproject.com/en/2.2/ref/settings/#std:setting-LANGUAGE_COOKIE_NAME
 LANGUAGE_COOKIE_DEPRECATED_NAME = 'django-language'
