@@ -113,7 +113,7 @@ class NullableNotBlankFieldModel(models.Model):
 
 
 class UniqueForModel(models.Model):
-    field = models.TextField(null=True, blank=False)
+    field = models.TextField(default='', blank=True)
     unique_for_date = models.DateField(unique_for_date='field')
     unique_for_month = models.DateField(unique_for_month='field')
     unique_for_year = models.DateField(unique_for_year='field')
