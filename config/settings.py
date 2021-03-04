@@ -36,7 +36,7 @@ DEBUG = env.bool('DEBUG', False)
 ALLOWED_HOSTS = ['*']
 
 # https://docs.djangoproject.com/en/dev/ref/settings/#append-slash
-APPEND_SLASH = True
+
 
 # Application definition
 
@@ -60,6 +60,7 @@ MIDDLEWARE = [
     'django.middleware.http.ConditionalGetMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.security.SecurityMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
@@ -139,3 +140,14 @@ SSO_PROXY_SIGNUP_URL = 'https://signup.com'
 SSO_PROXY_LOGIN_URL = 'https://login.com'
 SSO_PROXY_LOGOUT_URL = 'https://logout.com'
 SSO_PROFILE_URL = 'https://profile.com'
+
+
+SECURE_HSTS_SECONDS = 3600
+
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+
+SECURE_SSL_REDIRECT = os.getenv('SECURE_SSL_REDIRECT_ENABLED') != 'False'
+
+SESSION_COOKIE_SECURE = os.getenv('SESSION_COOKIE_SECURE_ENABLED') != 'False'
+
+SECURE_HSTS_PRELOAD = True
