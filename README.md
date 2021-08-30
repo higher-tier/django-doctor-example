@@ -6,3 +6,4 @@ https://django.doctor/higher-tier/django-doctor-example/check-models.svg)](https
 **Example repo for demonstrating [Django Doctor](https://django.doctor) codebase audit**
 
 ---
+
