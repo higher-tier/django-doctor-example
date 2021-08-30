@@ -71,7 +71,8 @@ class DemoTooManyModelsTen(models.Model):
 
 
 class DemoTooManyModelsEleven(models.Model):
-    pass
+    field_01 = models.CharField(max_length=5000)
+
 
 
 class NullableCharFieldModel(models.Model):
