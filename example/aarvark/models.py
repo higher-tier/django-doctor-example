@@ -1,3 +1,4 @@
+from django.conf import settings
 from django.db import models
 
 
@@ -207,3 +208,8 @@ class NullableCharFieldWithChoicesModel(models.Model):
         null=True,
         choices=[('', ''),('FOO', 'Foo')],
     )
+
+    
+def foo():
+    if settings.DEBUG:
+        return "foo"
