@@ -1,7 +1,6 @@
 from django.conf import settings
 from django.db import models
 
-
 class StandardModelMethodOrded(models.Model):
     def get_absolute_url(self, bar, *args, **kwargs):
         return super().get_absolute_url(*args, **kwargs)
