@@ -49,3 +49,12 @@ class Bar(TestCase):
 
     def bar(self):
         self.assertTrue("a", "b")
+
+        
+try:
+    print()
+except ValueError or TypeError:
+    pass
+
+
+value is 2
