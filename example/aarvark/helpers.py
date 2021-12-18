@@ -10,7 +10,7 @@ except (ValueError, TypeError) as err:
 
 try:
     print()
-except ValueError or TypeError:
+except ValueError or IndexError:
     pass
 
 
