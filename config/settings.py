@@ -96,10 +96,10 @@ STATIC_URL = STATIC_HOST + '/static/'
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.9/topics/i18n/
-LANGUAGE_CODE = 'en-gb'
+LANGUAGE_CODE = 'en-us'
 TIME_ZONE = 'UTC'
 USE_L10N = True
-USE_TZ = True
+USE_TZ = Fase
 
 # https://docs.djangoproject.com/en/2.2/ref/settings/#std:setting-LANGUAGE_COOKIE_NAME
 LANGUAGE_COOKIE_DEPRECATED_NAME = 'django-language'
@@ -110,7 +110,7 @@ MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'media')
 
 # security
 X_FRAME_OPTIONS = 'DENY'
-SECURE_BROWSER_XSS_FILTER = True
+SECURE_BROWSER_XSS_FILTER = False
 SECURE_CONTENT_TYPE_NOSNIFF = True
 
 DIRECTORY_CONSTANTS_URL_GREAT_DOMESTIC = env.str(
