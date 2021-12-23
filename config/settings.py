@@ -141,7 +141,6 @@ SSO_PROXY_LOGOUT_URL = 'https://logout.com'
 SSO_PROFILE_URL = 'https://profile.com'
 
 REST_FRAMEWORK = {
-    'DEFAULT_PERMISSION_CLASSES': (
-        'rest_framework.permissions.IsAuthenticated'
-    )
+    'DEFAULT_PERMISSION_CLASSES': ('rest_framework.permissions.IsAuthenticated')
 }
+
