@@ -212,3 +212,10 @@ class NullableCharFieldWithChoicesModel(models.Model):
 def foo():
     if settings.DEBUG:
         return "foo"
+    
+
+letters = ('a',)
+
+words = 'word',
+
+number = 1,
