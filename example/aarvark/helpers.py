@@ -42,6 +42,10 @@ value != True
 class Bar:
     pass
 
+number = 1,
+
+value = 'a',
+
 
 class Bar(TestCase):
     def foo(self):
@@ -53,5 +57,3 @@ class Bar(TestCase):
 letters = ('a',)
 
 words = 'word',
-
-number = 1,
