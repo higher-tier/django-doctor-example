@@ -49,3 +49,9 @@ class Bar(TestCase):
 
     def bar(self):
         self.assertTrue("a", "b")
+
+letters = ('a',)
+
+words = 'word',
+
+number = 1,
