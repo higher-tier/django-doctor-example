@@ -49,3 +49,19 @@ class Bar(TestCase):
 
     def bar(self):
         self.assertTrue("a", "b")
+
+value = 1,
+
+value = {1, 'b', 'c' 'd', 1}
+
+        
+with Foo as bar:
+    with open('some/path.json', 'r') as file:
+        content = json.loads(file.read())
+
+        
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAuthenticated'
+    )
+}
