@@ -68,3 +68,7 @@ REST_FRAMEWORK = {
 
 with open('some/path.json', 'r', encoding='utf') as file:
     content = json.loads(file.read())
+    
+    
+with open('some/path.json', 'r') as f:
+    content = json.loads(f.read())
