@@ -65,3 +65,6 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.IsAuthenticated'
     )
 }
+
+with open('some/path.json', 'r', encoding='utf') as file:
+    content = json.loads(file.read())
