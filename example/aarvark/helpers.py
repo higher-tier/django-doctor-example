@@ -1,4 +1,3 @@
-from unittest import TestCase
 from dataclasses import dataclass
 
 
@@ -42,13 +41,6 @@ value != True
 class Bar:
     pass
 
-
-class Bar(TestCase):
-    def foo(self):
-        self.assertEquals("a", "b")
-
-    def bar(self):
-        self.assertTrue("a", "b")
 
 value = 1,
 
