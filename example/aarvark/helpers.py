@@ -43,6 +43,12 @@ class Bar:
     pass
 
 
+
+
+
+
+
+
 value = 1,
 
 value = {1, 'b', 'c' 'd', 1}
