@@ -65,3 +65,7 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.IsAuthenticated'
     )
 }
+
+name = "jeff"
+
+raise ValidationError("My name is {name}")
